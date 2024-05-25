@@ -1,29 +1,23 @@
-// server.js
 const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const contentRoutes = require('./routes/content');
-
+const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(bodyParser.json());
-app.use(cors());
+// Middleware untuk melayani file statis dari folder 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
-// MongoDB connection
-mongoose.connect('mongodb://localhost:27017/metrologyjourney', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+// Endpoint untuk mengambil konten dinamis
+app.get('/api/content', (req, res) => {
+    // Data konten dinamis sebagai contoh
+    const content = [
+        { title: 'Pengembangan Soft Skill', content: 'Konten tentang pengembangan soft skill...', category: 'Soft Skill' },
+        { title: 'Proyek Metrologi Terbaru', content: 'Informasi tentang proyek metrologi terbaru...', category: 'Metrologi' },
+        // Tambahkan konten lainnya sesuai kebutuhan
+    ];
+    res.json(content);
 });
 
-// Routes
-app.use('/api/content', contentRoutes);
-
-// Serve static files
-app.use(express.static('public'));
-
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
+// Jalankan server
+app.listen(PORT, () => {
+    console.log(`Server berjalan di http://localhost:${PORT}`);
 });
