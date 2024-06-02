@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Menambahkan CSS untuk tata letak dan desain dasar */
 body {
     font-family: Arial, sans-serif;
@@ -81,10 +83,18 @@ footer {
     outline: none;
 }
 
+header nav ul.showing {
+    display: block;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     header {
         padding-bottom: 2em; /* Tambahkan jarak antara header dan menu pada layar kecil */
+    }
+
+    header nav ul {
+        display: none;
     }
 
     header nav ul li {
@@ -96,5 +106,9 @@ footer {
 
     .menu-toggle {
         display: block; /* Tampilkan tombol toggle di layar berukuran lebih kecil */
+    }
+
+    header nav ul.showing {
+        display: block;
     }
 }
