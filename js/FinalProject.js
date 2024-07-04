@@ -1,14 +1,3 @@
-/*!
-* Start Bootstrap - Scrolling Nav v5.0.6 (https://startbootstrap.com/template/scrolling-nav)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
-
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -97,21 +86,4 @@ window.addEventListener('DOMContentLoaded', event => {
         .catch(error => console.error('Error fetching the Excel file:', error));
 
        
-});
-
-document.querySelector(".about-btn").addEventListener("click", function(event) {
-    event.preventDefault();
-
-    let aboutsection = document.getElementById("about");
-    let bodySelector = document.querySelector("body");
-
-    if (aboutsection.style.display !== "none" && aboutsection.style.display !== "") {
-        aboutsection.style.display = "none";
-        bodySelector.style.backgroundColor = "#0d6efd";
-    } else {
-        aboutsection.style.display = "block";
-        bodySelector.style.backgroundColor = "#dee2e6";
-        // Scroll to the "About" section
-        aboutsection.scrollIntoView({ behavior: "smooth" });
-    }
 });
