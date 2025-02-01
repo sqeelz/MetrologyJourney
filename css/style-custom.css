@@ -33,3 +33,25 @@ footer {
 body{
     background-color: #0d6efd;
 }
+
+.profil1{
+    width: 100% ;
+    height: auto ;
+    padding-bottom: 15px ;
+    border-radius: 25px;
+    background: url(paper.gif);
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+ }
+ 
+ .profil2{
+     width: 100% ;
+     height: auto ;
+     padding-bottom: 15px ;
+     border-radius: 25px;
+     background: url(paper.gif);
+     background-position: left top;
+     background-repeat: repeat;
+     padding: 20px;
+  }
