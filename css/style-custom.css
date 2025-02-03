@@ -21,7 +21,12 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
 .alumni{
+    display: none;
+}
+
+.tugas-akhir{
     display: none;
 }
 
@@ -39,7 +44,6 @@ body{
     height: auto ;
     padding-bottom: 15px ;
     border-radius: 25px;
-    background: url(paper.gif);
     background-position: left top;
     background-repeat: repeat;
     padding: 20px;
@@ -50,7 +54,6 @@ body{
      height: auto ;
      padding-bottom: 15px ;
      border-radius: 25px;
-     background: url(paper.gif);
      background-position: left top;
      background-repeat: repeat;
      padding: 20px;

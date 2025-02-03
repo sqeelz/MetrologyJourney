@@ -45,7 +45,6 @@ window.addEventListener('DOMContentLoaded', event => {
                         "Tahun_Lulus",
                         "Posisi_Pekerjaan",
                         "Perusahaan_Tempat_Bekerja",
-                        "No_HP"
                     ],
                     range: 2 // Skip the first row which contains column headers
                 });
@@ -72,7 +71,6 @@ window.addEventListener('DOMContentLoaded', event => {
                             { data: 'Tahun_Lulus' },
                             { data: 'Posisi_Pekerjaan' },
                             { data: 'Perusahaan_Tempat_Bekerja' },
-                            { data: 'No_HP' }
                         ]
                     });
                 });
